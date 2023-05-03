@@ -1,0 +1,9 @@
+{
+    "openai_key": "",
+    "modules": [
+        "landing_page",
+        "login",
+        "register",
+        "forget_password"
+    ]
+}
