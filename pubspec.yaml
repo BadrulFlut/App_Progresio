@@ -58,6 +58,12 @@ flutter:
   assets:
     - assets/images/forpass.png
     - assets/images/verif.png
+    - assets/images/failed.png
+    - assets/images/gps.png
+    - assets/images/loc.png
+    - assets/images/notconn.png
+    - assets/images/success.png
+    - assets/images/bannerbg.png
     - assets/icons/google.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

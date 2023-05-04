@@ -1,8 +1,7 @@
 import 'package:app_progresio/core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-Row checkBox(RegisterController controller, Widget widget) {
+Row checkBoxReg(RegisterController controller, Widget widget) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [

@@ -2,8 +2,8 @@ import 'package:app_progresio/core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Column textFieldReg(RegisterController controller, String title,
-    bool obscureText, bool number) {
+Column textFieldSet(
+    SetNewPasswordController controller, String title, bool obscureText) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -20,7 +20,6 @@ Column textFieldReg(RegisterController controller, String title,
       TextFormField(
         style: GoogleFonts.openSans(fontSize: 14, fontWeight: FontWeight.w600),
         obscureText: controller.obscureText,
-        keyboardType: number ? TextInputType.phone : TextInputType.name,
         decoration: InputDecoration(
             enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(

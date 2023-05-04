@@ -42,7 +42,7 @@ class ForgetPasswordView extends StatefulWidget {
           const SizedBox(
             height: 22.0,
           ),
-          textField(controller, "Email", false),
+          textFieldFor(controller, "Email", false),
           const SizedBox(
             height: 20.0,
           ),

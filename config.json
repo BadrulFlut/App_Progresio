@@ -4,6 +4,13 @@
         "landing_page",
         "login",
         "register",
-        "forget_password"
+        "forget_password",
+        "sent_code_password",
+        "set_new_password",
+        "no_connect",
+        "success",
+        "failed",
+        "gps_off",
+        "loc_not_detected"
     ]
 }

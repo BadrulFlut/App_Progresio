@@ -37,18 +37,18 @@ class LoginView extends StatefulWidget {
           const SizedBox(
             height: 14.0,
           ),
-          textField(controller, "Email", false),
+          textFieldLog(controller, "Email", false),
           const SizedBox(
             height: 16.0,
           ),
-          textField(controller, "Password", true),
+          textFieldLog(controller, "Password", true),
           const SizedBox(
             height: 16.0,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              checkBox(
+              checkBoxRLog(
                 controller,
                 Text(
                   "Ingat Saya",

@@ -2,7 +2,8 @@ import 'package:app_progresio/module/login/controller/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Column textField(LoginController controller, String title, bool obscureText) {
+Column textFieldLog(
+    LoginController controller, String title, bool obscureText) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [

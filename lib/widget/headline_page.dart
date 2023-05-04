@@ -11,13 +11,15 @@ Column headlinePage(String title, String subTitle) {
             fontWeight: FontWeight.w600, fontSize: 22, color: Colors.black),
       ),
       const SizedBox(
-        height: 4.0,
+        height: 8.0,
       ),
       Text(
         subTitle,
         textAlign: TextAlign.center,
-        style:
-            GoogleFonts.openSans(fontSize: 14.0, fontWeight: FontWeight.w400),
+        style: GoogleFonts.openSans(
+            fontSize: 14.0,
+            fontWeight: FontWeight.w400,
+            color: const Color.fromRGBO(26, 41, 61, 0.83)),
       ),
     ],
   );

@@ -1,13 +1,12 @@
-import 'package:app_progresio/widget/button.dart';
 import 'package:app_progresio/module/register/widget/check_box.dart';
+import 'package:app_progresio/module/register/widget/text_field.dart';
+import 'package:app_progresio/widget/button.dart';
 import 'package:app_progresio/widget/container_google.dart';
 import 'package:app_progresio/widget/headline_page.dart';
 import 'package:app_progresio/widget/or_seperator.dart';
-import 'package:app_progresio/module/register/widget/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../controller/register_controller.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({Key? key}) : super(key: key);
@@ -41,27 +40,27 @@ class RegisterView extends StatefulWidget {
             const SizedBox(
               height: 24.0,
             ),
-            textField(controller, "Nama", false, false),
+            textFieldReg(controller, "Nama", false, false),
             const SizedBox(
               height: 16.0,
             ),
-            textField(controller, "Email", false, false),
+            textFieldReg(controller, "Email", false, false),
             const SizedBox(
               height: 16.0,
             ),
-            textField(controller, "Nik", false, true),
+            textFieldReg(controller, "Nik", false, true),
             const SizedBox(
               height: 16.0,
             ),
-            textField(controller, "Nomer Handphone", false, true),
+            textFieldReg(controller, "Nomer Handphone", false, true),
             const SizedBox(
               height: 16.0,
             ),
-            textField(controller, "Sandi", true, false),
+            textFieldReg(controller, "Sandi", true, false),
             const SizedBox(
               height: 16.0,
             ),
-            textField(controller, "Ulangi Sandi", true, false),
+            textFieldReg(controller, "Ulangi Sandi", true, false),
             const SizedBox(
               height: 19.0,
             ),
@@ -69,7 +68,7 @@ class RegisterView extends StatefulWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                checkBox(
+                checkBoxReg(
                     controller,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

@@ -2,7 +2,7 @@ import 'package:app_progresio/module/login/controller/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Row checkBox(LoginController controller, Widget widget) {
+Row checkBoxRLog(LoginController controller, Widget widget) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
