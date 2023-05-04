@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
-      home: const FailedView(),
+      home: const HomeView(),
     );
   }
 }

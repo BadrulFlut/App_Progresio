@@ -11,6 +11,9 @@
         "success",
         "failed",
         "gps_off",
-        "loc_not_detected"
+        "loc_not_detected",
+        "home",
+        "profile",
+        "notification"
     ]
 }
