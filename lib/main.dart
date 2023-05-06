@@ -1,5 +1,4 @@
 import 'package:app_progresio/core.dart';
-import 'package:app_progresio/state_util.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
-      home: const HomeView(),
+      home: const FilterView(),
     );
   }
 }

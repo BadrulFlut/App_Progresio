@@ -14,7 +14,7 @@ Row bannerPage(VoidCallback btnFilter, VoidCallback btnNotification,
           height: 26,
           decoration: BoxDecoration(
               color: const Color.fromRGBO(255, 255, 255, 0.2),
-              borderRadius: BorderRadius.circular(6)),
+              borderRadius: BorderRadius.circular(100)),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,

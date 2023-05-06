@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:app_progresio/state_util.dart';
-import '../view/home_view.dart';
+import '../view/filter_view.dart';
 
-class HomeController extends State<HomeView> implements MvcController {
-  static late HomeController instance;
-  late HomeView view;
+class FilterController extends State<FilterView> implements MvcController {
+  static late FilterController instance;
+  late FilterView view;
 
   @override
   void initState() {
@@ -17,10 +17,7 @@ class HomeController extends State<HomeView> implements MvcController {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
-
   final TextEditingController searchController = TextEditingController();
-  ScrollController scrollController = ScrollController();
-
   bool isChecked = true;
   bool isDate = false;
   String dateTime1 = "";
