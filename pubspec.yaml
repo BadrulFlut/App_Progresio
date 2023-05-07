@@ -64,7 +64,20 @@ flutter:
     - assets/images/notconn.png
     - assets/images/success.png
     - assets/images/bannerbg.png
+    - assets/images/client_a.png
+    - assets/images/client_b.png
+    - assets/images/client_c.png
+    - assets/images/client_d.png
+    - assets/images/client_e.png
+    - assets/images/form_covid.png
+    - assets/images/form_paslon.png
+    - assets/images/profile.png
     - assets/icons/google.png
+    - assets/icons/card.png
+    - assets/icons/log_out.png
+    - assets/icons/massage.png
+    - assets/icons/pencil.png
+    - assets/icons/phone.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

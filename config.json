@@ -18,6 +18,8 @@
         "form_report",
         "form_input_report",
         "search",
-        "filter"
+        "filter",
+        "Workspace",
+        "Form"
     ]
 }

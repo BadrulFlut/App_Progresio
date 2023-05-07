@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../controller/home_controller.dart';
 import 'check_box.dart';
 
-SingleChildScrollView filterWidgetComp(BuildContext context, double width,
+SingleChildScrollView filterWidgetCompHome(BuildContext context, double width,
     HomeController controller, VoidCallback button) {
   return SingleChildScrollView(
     child: Container(
