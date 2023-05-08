@@ -1,3 +1,4 @@
+import 'package:app_progresio/core.dart';
 import 'package:flutter/material.dart';
 
 class CustomDropdownButton extends StatefulWidget {
@@ -36,6 +37,11 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
             setState(() {
               _selectedOption = newValue.toString();
               widget.onChanged(_selectedOption!);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          FormInputReportView(title: _selectedOption!)));
             });
             // print(_selectedOption);
             // controller.variable = _selectedOption

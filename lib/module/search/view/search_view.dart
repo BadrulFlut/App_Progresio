@@ -26,13 +26,13 @@ class SearchView extends StatefulWidget {
                   width: width,
                   height: 234,
                   color: Colors.white,
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(top: 60, left: 20, right: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 60, left: 20, right: 20),
+                        child: Row(
                           children: [
                             IconButton(
                               onPressed: () {},
@@ -50,39 +50,43 @@ class SearchView extends StatefulWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20, right: 20),
+                            child: Text(
                               "Filter terpasang",
                               style: GoogleFonts.openSans(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black),
                             ),
-                            const SizedBox(
-                              height: 12.0,
+                          ),
+                          const SizedBox(
+                            height: 12.0,
+                          ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Row(
+                              children: [
+                                buttonContainer(() {},
+                                    "Elektabilitas Paslon Kaltim", true, 195),
+                                buttonContainer(
+                                    () {}, "Laporan Covid", false, 119),
+                                buttonContainer(
+                                    () {}, "Laporan Covid", false, 119),
+                              ],
                             ),
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                children: [
-                                  buttonContainer(() {},
-                                      "Elektabilitas Paslon Kaltim", true, 195),
-                                  buttonContainer(
-                                      () {}, "Laporan Covid", false, 119),
-                                  buttonContainer(
-                                      () {}, "Laporan Covid", false, 119),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -113,6 +117,7 @@ class SearchView extends StatefulWidget {
                     ListView.builder(
                       itemCount: controller.data.length,
                       shrinkWrap: true,
+                      primary: false,
                       itemBuilder: (context, index) {
                         final data = controller.data[index];
                         return cardDataUser(data["profile"], width,

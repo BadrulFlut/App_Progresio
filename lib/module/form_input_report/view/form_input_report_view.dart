@@ -5,10 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../controller/form_input_report_controller.dart';
 
 class FormInputReportView extends StatefulWidget {
-  // String title;
-  const FormInputReportView({
-    Key? key,
-  }) : super(key: key);
+  String title;
+  FormInputReportView({Key? key, required this.title}) : super(key: key);
 
   Widget build(context, FormInputReportController controller) {
     controller.view = this;
@@ -23,7 +21,7 @@ class FormInputReportView extends StatefulWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           DropdownButtonInput(
-              hintText: "Laporan Kegiatan Marketing",
+              hintText: title,
               optionsList: [
                 "Elektabilitas Paslon Kaltim",
                 "Laporan Kegiatan Marketing"

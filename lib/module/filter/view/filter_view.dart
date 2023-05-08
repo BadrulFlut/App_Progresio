@@ -39,7 +39,12 @@ class FilterView extends StatefulWidget {
                       width: 12.0,
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const NotificationView()));
+                      },
                       icon: const Icon(
                         Icons.notifications_none_outlined,
                         size: 28.0,

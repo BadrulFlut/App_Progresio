@@ -1,3 +1,5 @@
+import 'package:app_progresio/module/form/view/Form_view.dart';
+import 'package:app_progresio/module/workspace/view/Workspace_view.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -194,12 +196,42 @@ class ProfileView extends StatefulWidget {
                       padding: const EdgeInsets.only(left: 20, top: 38),
                       child: Row(
                         children: [
-                          cardDataClient("a", "Klien A"),
-                          cardDataClient("b", "Klien B"),
-                          cardDataClient("c", "Klien C"),
-                          cardDataClient("d", "Klien D"),
-                          cardDataClient("a", "Klien A"),
-                          cardDataClient("b", "Klien B"),
+                          cardDataClient(() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const WorkspaceView()));
+                          }, "a", "Klien A"),
+                          cardDataClient(() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const WorkspaceView()));
+                          }, "b", "Klien B"),
+                          cardDataClient(() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const WorkspaceView()));
+                          }, "c", "Klien C"),
+                          cardDataClient(() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const WorkspaceView()));
+                          }, "d", "Klien D"),
+                          cardDataClient(() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const WorkspaceView()));
+                          }, "a", "Klien A"),
+                          cardDataClient(() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const WorkspaceView()));
+                          }, "b", "Klien B"),
                         ],
                       ),
                     )
@@ -226,7 +258,10 @@ class ProfileView extends StatefulWidget {
                   const SizedBox(
                     height: 16.0,
                   ),
-                  cardFormDataProf(
+                  cardFormDataProf(() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const FormView()));
+                  },
                       width,
                       "form_paslon",
                       "Elektabilitas Paslon Kaltim",
@@ -237,7 +272,10 @@ class ProfileView extends StatefulWidget {
                   const SizedBox(
                     height: 8.0,
                   ),
-                  cardFormDataProf(
+                  cardFormDataProf(() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const FormView()));
+                  },
                       width,
                       "form_paslon",
                       "Elektabilitas Paslon Kaltim",
@@ -248,7 +286,10 @@ class ProfileView extends StatefulWidget {
                   const SizedBox(
                     height: 8.0,
                   ),
-                  cardFormDataProf(
+                  cardFormDataProf(() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const FormView()));
+                  },
                       width,
                       "form_covid",
                       "Laporan Covid",

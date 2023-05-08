@@ -50,7 +50,18 @@ class HomeView extends StatefulWidget {
                                   });
                                 },
                               );
-                            }, () {}, () {}, "profile"),
+                            }, () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) =>
+                                          const NotificationView()));
+                            }, () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => const ProfileView()));
+                            }, "profile"),
                             const SizedBox(
                               height: 16.0,
                             ),

@@ -1,3 +1,4 @@
+import 'package:app_progresio/core.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/state_util.dart';
 import '../view/home_view.dart';
@@ -27,7 +28,8 @@ class HomeController extends State<HomeView> implements MvcController {
   String dateTime2 = "";
 
   void onSubmitted(String value) {
-    //Search
+    Navigator.push(
+        context, MaterialPageRoute(builder: (_) => const FilterView()));
   }
 
   check() {

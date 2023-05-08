@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Row backButtonNotif(double width, VoidCallback backbutton) {
+Row backButtonForm(
+    double width, VoidCallback backbutton, VoidCallback logoutbutton) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
@@ -18,7 +19,7 @@ Row backButtonNotif(double width, VoidCallback backbutton) {
           alignment: Alignment.center,
           padding: EdgeInsets.only(right: width / 10),
           child: Text(
-            "Notifikasi",
+            "Form",
             style: GoogleFonts.openSans(
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,

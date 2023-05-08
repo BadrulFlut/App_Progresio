@@ -24,7 +24,9 @@ class NotificationView extends StatefulWidget {
                     image: DecorationImage(
                         fit: BoxFit.fitWidth,
                         image: AssetImage("Assets/images/bannerbg.png"))),
-                child: backButtonNotif(width, () {}, () {})),
+                child: backButtonNotif(width, () {
+                  Navigator.pop(context);
+                })),
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Row(
