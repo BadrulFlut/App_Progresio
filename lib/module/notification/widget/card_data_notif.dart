@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-InkWell cardDataNotif(double width, String name, String lastTime, String work,
-    String description, VoidCallback button, String imageData, bool isRead) {
+InkWell cardDataNotif(
+    String image,
+    double width,
+    String name,
+    String lastTime,
+    String work,
+    String description,
+    VoidCallback button,
+    String imageData,
+    bool isRead) {
   return InkWell(
     onTap: button,
     child: Container(
@@ -17,12 +25,10 @@ InkWell cardDataNotif(double width, String name, String lastTime, String work,
           Container(
             width: 32,
             height: 32,
-            decoration: const BoxDecoration(
-                // image: DecorationImage(
-                //   image: AssetImage("")
-                // ),
-                shape: BoxShape.circle,
-                color: Colors.black),
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage(image)),
+              shape: BoxShape.circle,
+            ),
           ),
           const SizedBox(
             width: 12.0,
@@ -83,10 +89,9 @@ InkWell cardDataNotif(double width, String name, String lastTime, String work,
                         width: width,
                         height: 173,
                         decoration: BoxDecoration(
-                            // image: DecorationImage(
-                            //   image: AssetImage("")
-                            // )
-                            color: Colors.black,
+                            image: DecorationImage(
+                                image: AssetImage(imageData),
+                                fit: BoxFit.cover),
                             borderRadius: BorderRadius.circular(6)),
                       )
               ],

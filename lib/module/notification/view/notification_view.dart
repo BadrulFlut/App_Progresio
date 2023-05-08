@@ -1,9 +1,6 @@
-import 'package:app_progresio/module/notification/widget/back_button_page.dart';
-import 'package:app_progresio/module/notification/widget/card_data_notif.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../controller/notification_controller.dart';
 
 class NotificationView extends StatefulWidget {
   const NotificationView({Key? key}) : super(key: key);
@@ -45,7 +42,7 @@ class NotificationView extends StatefulWidget {
                       controller.readAll();
                     },
                     child: Text(
-                      "Tandai Sudah di Baca",
+                      "Tandai Sudah di Baca (5)",
                       style: GoogleFonts.openSans(
                           fontSize: 16.0,
                           fontWeight: FontWeight.w600,
@@ -63,8 +60,8 @@ class NotificationView extends StatefulWidget {
                 primary: false,
                 itemBuilder: (context, index) {
                   final data = controller.data[index];
-                  return cardDataNotif(width, data['title'], data['last_time'],
-                      data['work'], data['description'], () {
+                  return cardDataNotif(data["profile"], width, data['title'],
+                      data['last_time'], data['work'], data['description'], () {
                     controller.onRead(index);
                   }, data["image"], data['isRead']);
                 },

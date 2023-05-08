@@ -11,9 +11,13 @@ InkWell buttonContainer(
       height: 31,
       alignment: Alignment.center,
       decoration: BoxDecoration(
+          border: isClick
+              ? Border.all(
+                  width: 1, color: const Color.fromRGBO(0, 156, 255, 1))
+              : null,
           borderRadius: BorderRadius.circular(6),
           color: isClick
-              ? Colors.blue[100]
+              ? const Color.fromRGBO(0, 156, 255, 0.1)
               : const Color.fromARGB(28, 158, 158, 158)),
       child: Text(
         title,
@@ -21,7 +25,7 @@ InkWell buttonContainer(
             fontSize: 14.0,
             fontWeight: FontWeight.w400,
             color: isClick
-                ? Colors.blue
+                ? const Color.fromRGBO(0, 156, 255, 1)
                 : const Color.fromARGB(162, 158, 158, 158)),
       ),
     ),

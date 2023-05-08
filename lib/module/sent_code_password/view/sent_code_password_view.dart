@@ -22,7 +22,9 @@ class SentCodePasswordView extends StatefulWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          backButtonPage(() {}, () {}),
+          backButtonPage(() {
+            Navigator.pop(context);
+          }, () {}),
           const SizedBox(
             height: 63.0,
           ),
@@ -75,7 +77,10 @@ class SentCodePasswordView extends StatefulWidget {
           const SizedBox(
             height: 32.0,
           ),
-          button(width, "Lanjut", () {}),
+          button(width, "Lanjut", () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const SetNewPasswordView()));
+          }),
           const SizedBox(
             height: 110.0,
           ),
@@ -91,7 +96,10 @@ class SentCodePasswordView extends StatefulWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const LoginView()));
+                },
                 child: Text(
                   "Masuk",
                   style: GoogleFonts.openSans(

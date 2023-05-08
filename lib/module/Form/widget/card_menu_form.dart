@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Row cardMenuForm(Color color, String title, String client) {
+Row cardMenuForm(String icon, Color color, String title, String client) {
   return Row(
     children: [
       Container(
         width: 32,
         height: 32,
-        decoration:
-            BoxDecoration(borderRadius: BorderRadius.circular(4), color: color),
-        // child: const Icon(
-        //   Icons.work_rounded,
-        //   size: 16.0,
-        // ),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(4),
+            color: color,
+            image:
+                DecorationImage(image: AssetImage("assets/icons/$icon.png"))),
       ),
       const SizedBox(
         width: 12.0,

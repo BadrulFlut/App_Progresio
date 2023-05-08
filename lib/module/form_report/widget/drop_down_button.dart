@@ -5,12 +5,14 @@ class CustomDropdownButton extends StatefulWidget {
   final List<String> optionsList;
   final Function(String) onChanged;
 
-  CustomDropdownButton(
-      {required this.hintText,
+  const CustomDropdownButton(
+      {super.key,
+      required this.hintText,
       required this.optionsList,
       required this.onChanged});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomDropdownButtonState createState() => _CustomDropdownButtonState();
 }
 

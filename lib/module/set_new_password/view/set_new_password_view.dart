@@ -24,7 +24,9 @@ class SetNewPasswordView extends StatefulWidget {
           Row(
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: const Icon(Icons.arrow_back_ios, size: 18),
               ),
             ],
@@ -45,7 +47,10 @@ class SetNewPasswordView extends StatefulWidget {
           const SizedBox(
             height: 20.0,
           ),
-          button(width, "Kirim", () {})
+          button(width, "Kirim", () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => const LoginView()));
+          })
         ],
       ),
     ));

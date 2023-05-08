@@ -22,6 +22,7 @@ class NotificationController extends State<NotificationView>
     {
       "title": "Pilpres 2024",
       "work": "Workspace",
+      "profile": "assets/images/userprof/user4.png",
       "description": "Selamat Anda Tergabung dengan workspace Pilpres 2024",
       "last_time": "1 jam Lalu",
       "image": "",
@@ -30,6 +31,7 @@ class NotificationController extends State<NotificationView>
     {
       "title": "Pilpres 2024",
       "work": "Form",
+      "profile": "assets/images/userprof/user7.png",
       "description": "Form Survey terkait elektabilitas paslon pilpres 2024",
       "last_time": "2 jam Lalu",
       "image": "",
@@ -38,14 +40,16 @@ class NotificationController extends State<NotificationView>
     {
       "title": "Pilpres 2024",
       "work": "Info",
+      "profile": "assets/images/userprof/user2.png",
       "description": "Form Survey terkait elektabilitas paslon pilpres 2024",
       "last_time": "1 jam Lalu",
-      "image": "ada",
+      "image": "assets/images/imagedata.png",
       "isRead": true
     },
     {
       "title": "Pilpres 2024",
       "work": "Form",
+      "profile": "assets/images/userprof/user1.png",
       "description": "Form Survey terkait elektabilitas paslon pilpres 2024",
       "last_time": "2 jam Lalu",
       "image": "",

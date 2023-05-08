@@ -40,27 +40,29 @@ class RegisterView extends StatefulWidget {
             const SizedBox(
               height: 24.0,
             ),
-            textFieldReg(controller, "Nama", false, false),
+            textFieldReg(controller, "Nama", false, false, false),
             const SizedBox(
               height: 16.0,
             ),
-            textFieldReg(controller, "Email", false, false),
+            textFieldReg(controller, "Email", false, false, false),
             const SizedBox(
               height: 16.0,
             ),
-            textFieldReg(controller, "Nik", false, true),
+            textFieldReg(controller, "Nik", false, true, false),
             const SizedBox(
               height: 16.0,
             ),
-            textFieldReg(controller, "Nomer Handphone", false, true),
+            textFieldReg(controller, "Nomer Handphone", false, true, false),
             const SizedBox(
               height: 16.0,
             ),
-            textFieldReg(controller, "Sandi", true, false),
+            textFieldReg(
+                controller, "Sandi", controller.obscureText, false, true),
             const SizedBox(
               height: 16.0,
             ),
-            textFieldReg(controller, "Ulangi Sandi", true, false),
+            textFieldReg(controller, "Ulangi Sandi", controller.obscureText,
+                false, true),
             const SizedBox(
               height: 19.0,
             ),
@@ -98,7 +100,10 @@ class RegisterView extends StatefulWidget {
             const SizedBox(
               height: 20.0,
             ),
-            button(width, "Mulai", () {}),
+            button(width, "Mulai", () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const HomeView()));
+            }),
             const SizedBox(
               height: 31.0,
             ),
@@ -112,9 +117,12 @@ class RegisterView extends StatefulWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const LoginView()));
+                },
                 child: Text(
-                  "Daftar",
+                  "Log in",
                   style: GoogleFonts.workSans(
                     fontSize: 13.0,
                     color: Colors.blue,

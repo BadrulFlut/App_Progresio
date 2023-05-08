@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-SizedBox cardDataUser(double width, String name, String subTitle, String date) {
+SizedBox cardDataUser(
+    String image, double width, String name, String subTitle, String date) {
   return SizedBox(
     width: width,
     child: Column(
@@ -13,11 +14,8 @@ SizedBox cardDataUser(double width, String name, String subTitle, String date) {
             Container(
               width: 32,
               height: 32,
-              decoration: const BoxDecoration(
-                  color: Colors.black,
-                  // image: DecorationImage(
-                  //   image: AssetImage("")
-                  // ),
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(image)),
                   shape: BoxShape.circle),
             ),
             const SizedBox(
@@ -45,14 +43,14 @@ SizedBox cardDataUser(double width, String name, String subTitle, String date) {
                         style: GoogleFonts.openSans(
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(188, 158, 158, 158)),
+                            color: const Color.fromARGB(188, 158, 158, 158)),
                       ),
                       Text(
                         date,
                         style: GoogleFonts.openSans(
                             fontSize: 14.0,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black),
+                            color: const Color.fromARGB(188, 158, 158, 158)),
                       ),
                     ],
                   )

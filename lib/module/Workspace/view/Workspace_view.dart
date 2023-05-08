@@ -1,6 +1,6 @@
-import 'package:app_progresio/module/Workspace/widget/back_button_page.dart';
-import 'package:app_progresio/module/Workspace/widget/card_data_work.dart';
-import 'package:app_progresio/module/Workspace/widget/card_menu_work.dart';
+import 'package:app_progresio/module/workspace/widget/back_button_page.dart';
+import 'package:app_progresio/module/workspace/widget/card_data_work.dart';
+import 'package:app_progresio/module/workspace/widget/card_menu_work.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -46,13 +46,9 @@ class WorkspaceView extends StatefulWidget {
                         height: 100,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: Colors.black
-                            // image: DecorationImage(
-                            //   image: AssetImage(
-                            //     "assets/images/profile.p"
-                            //   )
-                            // )
-                            ),
+                            image: const DecorationImage(
+                                image:
+                                    AssetImage("assets/images/profile2.png"))),
                       ),
                       const SizedBox(
                         height: 12.0,
@@ -86,8 +82,8 @@ class WorkspaceView extends StatefulWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  cardMenuWork(
-                      Colors.blue, "Pembuat", "Harits (Harits@ebdesk.com)"),
+                  cardMenuWork("user", Colors.blue, "Pembuat",
+                      "Harits (Harits@ebdesk.com)"),
                   Container(
                     margin: const EdgeInsets.only(top: 12, bottom: 16),
                     width: width,
@@ -97,7 +93,7 @@ class WorkspaceView extends StatefulWidget {
                       color: const Color.fromRGBO(234, 237, 246, 1),
                     )),
                   ),
-                  cardMenuWork(const Color.fromRGBO(0, 180, 181, 1),
+                  cardMenuWork("calender", const Color.fromRGBO(0, 180, 181, 1),
                       "Tanggal Dibuat", "12 March 2022"),
                   Container(
                     margin: const EdgeInsets.only(top: 12, bottom: 16),
@@ -115,11 +111,9 @@ class WorkspaceView extends StatefulWidget {
                         height: 32,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            color: const Color.fromRGBO(255, 183, 24, 1)),
-                        // child: const Icon(
-                        //   Icons.work_rounded,
-                        //   size: 16.0,
-                        // ),
+                            color: const Color.fromRGBO(255, 183, 24, 1),
+                            image: const DecorationImage(
+                                image: AssetImage("assets/icons/status.png"))),
                       ),
                       const SizedBox(
                         width: 12.0,

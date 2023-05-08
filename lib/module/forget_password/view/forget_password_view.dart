@@ -22,7 +22,9 @@ class ForgetPasswordView extends StatefulWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          backButtonPage(() {}, () {}),
+          backButtonPage(() {
+            Navigator.pop(context);
+          }, () {}),
           const SizedBox(
             height: 77.0,
           ),
@@ -46,12 +48,19 @@ class ForgetPasswordView extends StatefulWidget {
           const SizedBox(
             height: 20.0,
           ),
-          button(width, "Kirim", (() {})),
+          button(width, "Kirim", (() {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => const SentCodePasswordView()));
+          })),
           const SizedBox(
             height: 145.0,
           ),
           InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+              },
               child: Text(
                 "Kembali ke Masuk",
                 style: GoogleFonts.workSans(

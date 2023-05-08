@@ -22,7 +22,7 @@ class LoginView extends StatefulWidget {
       width: width,
       height: height,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           headlinePage("Masuk ke dalam akunmu",
               "Selamat Datang, Silahkan Isi Detil Anda"),
@@ -37,11 +37,11 @@ class LoginView extends StatefulWidget {
           const SizedBox(
             height: 14.0,
           ),
-          textFieldLog(controller, "Email", false),
+          textFieldLog(controller, "Email", false, false),
           const SizedBox(
             height: 16.0,
           ),
-          textFieldLog(controller, "Password", true),
+          textFieldLog(controller, "Password", controller.obscureText, true),
           const SizedBox(
             height: 16.0,
           ),
@@ -60,7 +60,12 @@ class LoginView extends StatefulWidget {
               ),
               const Spacer(),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const ForgetPasswordView()));
+                },
                 child: Text(
                   "Lupa Sandi?",
                   style: GoogleFonts.openSans(
@@ -74,7 +79,10 @@ class LoginView extends StatefulWidget {
           const SizedBox(
             height: 22.0,
           ),
-          button(width, "Masuk", () {}),
+          button(width, "Masuk", () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => const HomeView()));
+          }),
           const SizedBox(
             height: 33.0,
           ),
@@ -90,7 +98,10 @@ class LoginView extends StatefulWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const RegisterView()));
+                },
                 child: Text(
                   "Daftar",
                   style: GoogleFonts.workSans(

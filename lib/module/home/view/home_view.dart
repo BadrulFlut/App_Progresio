@@ -50,8 +50,7 @@ class HomeView extends StatefulWidget {
                                   });
                                 },
                               );
-                            }, () {}, () {},
-                                "https://images.unsplash.com/flagged/photo-1559502867-c406bd78ff24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80"),
+                            }, () {}, () {}, "profile"),
                             const SizedBox(
                               height: 16.0,
                             ),
@@ -139,13 +138,13 @@ class HomeView extends StatefulWidget {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
-                            reportContainer("assets/images/failed.png", "45",
+                            reportContainer("assets/images/myreport.png", "45",
                                 "Laporan Terakhir"),
                             const SizedBox(
                               width: 12.0,
                             ),
-                            reportContainer("assets/images/failed.png", "17",
-                                "Laporan Terbaru")
+                            reportContainer("assets/images/lastreport.png",
+                                "17", "Laporan Terbaru")
                           ],
                         ),
                       ),

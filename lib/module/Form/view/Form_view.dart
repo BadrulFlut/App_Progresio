@@ -1,6 +1,6 @@
-import 'package:app_progresio/module/Form/widget/back_button_page.dart';
-import 'package:app_progresio/module/Form/widget/card_menu_form.dart';
-import 'package:app_progresio/module/Form/widget/detail_menu.dart';
+import 'package:app_progresio/module/form/widget/back_button_page.dart';
+import 'package:app_progresio/module/form/widget/card_menu_form.dart';
+import 'package:app_progresio/module/form/widget/detail_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -46,13 +46,9 @@ class FormView extends StatefulWidget {
                         height: 100,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: Colors.black
-                            // image: DecorationImage(
-                            //   image: AssetImage(
-                            //     "assets/images/profile.p"
-                            //   )
-                            // )
-                            ),
+                            image: const DecorationImage(
+                                image:
+                                    AssetImage("assets/images/profile2.png"))),
                       ),
                       const SizedBox(
                         height: 12.0,
@@ -86,7 +82,7 @@ class FormView extends StatefulWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  cardMenuForm(Colors.blue, "Workspace", "Klien B"),
+                  cardMenuForm("work", Colors.blue, "Workspace", "Klien B"),
                   Container(
                     margin: const EdgeInsets.only(top: 12, bottom: 16),
                     width: width,
@@ -96,8 +92,8 @@ class FormView extends StatefulWidget {
                       color: const Color.fromRGBO(234, 237, 246, 1),
                     )),
                   ),
-                  cardMenuForm(
-                      Colors.blue, "Pembuat", "Harits (Harits@ebdesk.com)"),
+                  cardMenuForm("user", Colors.blue, "Pembuat",
+                      "Harits (Harits@ebdesk.com)"),
                   Container(
                     margin: const EdgeInsets.only(top: 12, bottom: 16),
                     width: width,
@@ -107,7 +103,7 @@ class FormView extends StatefulWidget {
                       color: const Color.fromRGBO(234, 237, 246, 1),
                     )),
                   ),
-                  cardMenuForm(const Color.fromRGBO(0, 180, 181, 1),
+                  cardMenuForm("calender", const Color.fromRGBO(0, 180, 181, 1),
                       "Tanggal Dibuat", "12 March 2022"),
                   Container(
                     margin: const EdgeInsets.only(top: 12, bottom: 16),
@@ -125,11 +121,9 @@ class FormView extends StatefulWidget {
                         height: 32,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            color: const Color.fromRGBO(255, 183, 24, 1)),
-                        // child: const Icon(
-                        //   Icons.work_rounded,
-                        //   size: 16.0,
-                        // ),
+                            color: const Color.fromRGBO(255, 183, 24, 1),
+                            image: const DecorationImage(
+                                image: AssetImage("assets/icons/status.png"))),
                       ),
                       const SizedBox(
                         width: 12.0,
@@ -175,11 +169,12 @@ class FormView extends StatefulWidget {
                   ),
                   Column(
                     children: [
-                      detailMenuForm(width, "Semua Laporan", "1300"),
+                      detailMenuForm(
+                          "allreport", width, "Semua Laporan", "1300"),
                       const SizedBox(
                         height: 8.0,
                       ),
-                      detailMenuForm(width, "Laporan Saya", "230")
+                      detailMenuForm("myreport", width, "Laporan Saya", "230")
                     ],
                   )
                 ],

@@ -99,6 +99,7 @@ class FilterView extends StatefulWidget {
                           Container(
                             width: 16,
                             height: 15,
+                            alignment: Alignment.center,
                             decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color.fromRGBO(1, 156, 255, 1)),
@@ -136,17 +137,16 @@ class FilterView extends StatefulWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16, left: 20, right: 20),
-              child: ListView.builder(
-                itemCount: 4,
-                shrinkWrap: true,
-                primary: false,
-                itemBuilder: (context, index) {
-                  return cardDataUser(width, "Brooklyn Simmons", "Safarudin",
-                      "29 Maret 2021 14:30");
-                },
-              ),
-            )
+                padding: const EdgeInsets.only(top: 16, left: 20, right: 20),
+                child: ListView.builder(
+                  itemCount: controller.data.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    final data = controller.data[index];
+                    return cardDataUser(data["profile"], width, data["name"],
+                        data["description"], data["time"]);
+                  },
+                ))
           ],
         ),
       ),

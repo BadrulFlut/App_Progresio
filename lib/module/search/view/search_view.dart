@@ -1,10 +1,8 @@
-import 'package:app_progresio/module/search/widget/text_field_search.dart';
 import 'package:app_progresio/widget/button_container.dart';
 import 'package:app_progresio/widget/card_data.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../controller/search_controller.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({Key? key}) : super(key: key);
@@ -17,104 +15,116 @@ class SearchView extends StatefulWidget {
         body: Container(
       height: height,
       width: width,
-      color: const Color.fromRGBO(248, 248, 248, 1),
-      child: Column(
-        children: [
-          Container(
-            width: width,
-            height: 234,
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 60, left: 20, right: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Row(
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.arrow_back_ios_rounded,
-                          size: 18.0,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 10.0,
-                      ),
-                      Expanded(
-                        child: search_field(controller.searchController,
-                            controller.onSubmitted),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  SizedBox(
-                    width: width,
+      color: Colors.white,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  width: width,
+                  height: 234,
+                  color: Colors.white,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(top: 60, left: 20, right: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Filter terpasang",
-                          style: GoogleFonts.openSans(
-                              fontSize: 14.0,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black),
+                        Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.arrow_back_ios_rounded,
+                                size: 18.0,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10.0,
+                            ),
+                            Expanded(
+                              child: search_field(controller.searchController,
+                                  controller.onSubmitted),
+                            ),
+                          ],
                         ),
-                        SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            children: [
-                              buttonContainer(() {},
-                                  "Elektabilitas Paslon Kaltim", true, 195),
-                              buttonContainer(
-                                  () {}, "Laporan Covid", false, 119),
-                              buttonContainer(
-                                  () {}, "Laporan Covid", false, 119),
-                            ],
-                          ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Filter terpasang",
+                              style: GoogleFonts.openSans(
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black),
+                            ),
+                            const SizedBox(
+                              height: 12.0,
+                            ),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: [
+                                  buttonContainer(() {},
+                                      "Elektabilitas Paslon Kaltim", true, 195),
+                                  buttonContainer(
+                                      () {}, "Laporan Covid", false, 119),
+                                  buttonContainer(
+                                      () {}, "Laporan Covid", false, 119),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10.0,
-          ),
-          Expanded(
-              child: Container(
-            width: width,
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Hasil Pencarian",
-                  style: GoogleFonts.openSans(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black),
                 ),
-                const SizedBox(
-                  height: 14.0,
-                ),
-                ListView.builder(
-                  itemCount: 5,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return cardDataUser(width, "Brooklyn Simmons", "Safarudin",
-                        "29 Maret 2021 14:30");
-                  },
-                )
               ],
             ),
-          ))
-        ],
+            Container(
+              height: 10.0,
+              width: width,
+              color: const Color.fromRGBO(248, 248, 248, 1),
+            ),
+            Container(
+              width: width,
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              color: Colors.white,
+              child: Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Hasil Pencarian",
+                      style: GoogleFonts.openSans(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black),
+                    ),
+                    const SizedBox(
+                      height: 14.0,
+                    ),
+                    ListView.builder(
+                      itemCount: controller.data.length,
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        final data = controller.data[index];
+                        return cardDataUser(data["profile"], width,
+                            data["name"], data["description"], data["time"]);
+                      },
+                    )
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     ));
   }

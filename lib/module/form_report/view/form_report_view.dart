@@ -1,8 +1,6 @@
-import 'package:app_progresio/module/form_report/widget/drop_down_button.dart';
 import 'package:app_progresio/widget/headline_page.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
-import '../controller/form_report_controller.dart';
 
 class FormReportView extends StatefulWidget {
   const FormReportView({Key? key}) : super(key: key);
@@ -34,11 +32,9 @@ class FormReportView extends StatefulWidget {
             Container(
               height: 221,
               width: 235,
-              decoration: const BoxDecoration(color: Colors.black
-                  // image: DecorationImage(
-                  //   image: AssetImage("")
-                  // )
-                  ),
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/report.png"))),
             ),
             const SizedBox(
               height: 28.0,
@@ -69,7 +65,7 @@ class FormReportView extends StatefulWidget {
             //     onChanged: controller.dropDownOnChanged),
             CustomDropdownButton(
                 hintText: "Pilih Form",
-                optionsList: [
+                optionsList: const [
                   "Elektabilitas Paslon Kaltim",
                   "Laporan Kegiatan Marketing"
                 ],

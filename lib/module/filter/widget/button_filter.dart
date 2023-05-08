@@ -23,7 +23,7 @@ Container buttonFilter(String value) {
         const SizedBox(
           width: 7.0,
         ),
-        const Icon(Icons.developer_board,
+        const Icon(Icons.keyboard_arrow_down_rounded,
             size: 8.0, color: Color.fromRGBO(1, 156, 255, 1)),
       ],
     ),

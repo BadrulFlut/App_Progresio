@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Container detailMenuForm(double width, String title, String count) {
+Container detailMenuForm(
+    String image, double width, String title, String count) {
   return Container(
     width: width,
     padding: const EdgeInsets.only(left: 16, right: 16, top: 18, bottom: 18),
@@ -14,11 +15,9 @@ Container detailMenuForm(double width, String title, String count) {
         Container(
           width: 61,
           height: 50,
-          decoration: const BoxDecoration(color: Colors.black
-              // image: DecorationImage(
-              //   image: AssetImage("")
-              // )
-              ),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/$image.png"))),
         ),
         const SizedBox(
           width: 16.0,

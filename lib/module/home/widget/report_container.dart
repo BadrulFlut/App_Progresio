@@ -11,8 +11,9 @@ Container reportContainer(String image, String count, String title) {
         Container(
           width: 65,
           height: 65,
-          decoration:
-              BoxDecoration(image: DecorationImage(image: AssetImage(image))),
+          decoration: BoxDecoration(
+              image:
+                  DecorationImage(fit: BoxFit.cover, image: AssetImage(image))),
         ),
         const SizedBox(
           width: 22.0,

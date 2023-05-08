@@ -58,7 +58,8 @@ Row bannerPage(VoidCallback btnFilter, VoidCallback btnNotification,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               image: DecorationImage(
-                  image: NetworkImage(image), fit: BoxFit.cover)),
+                  image: AssetImage("assets/images/$image.png"),
+                  fit: BoxFit.cover)),
         ),
       )
     ],

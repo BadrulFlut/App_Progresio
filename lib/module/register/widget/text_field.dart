@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Column textFieldReg(RegisterController controller, String title,
-    bool obscureText, bool number) {
+    bool obscureText, bool number, bool password) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -19,7 +19,7 @@ Column textFieldReg(RegisterController controller, String title,
       ),
       TextFormField(
         style: GoogleFonts.openSans(fontSize: 14, fontWeight: FontWeight.w600),
-        obscureText: controller.obscureText,
+        obscureText: obscureText,
         keyboardType: number ? TextInputType.phone : TextInputType.name,
         decoration: InputDecoration(
             enabledBorder: const OutlineInputBorder(
@@ -28,7 +28,7 @@ Column textFieldReg(RegisterController controller, String title,
                 width: 1,
               ),
             ),
-            suffixIcon: obscureText
+            suffixIcon: password
                 ? Padding(
                     padding: const EdgeInsets.only(right: 21),
                     child: InkWell(
