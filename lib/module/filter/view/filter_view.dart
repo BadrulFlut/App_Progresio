@@ -1,6 +1,3 @@
-import 'package:app_progresio/module/filter/widget/button_filter.dart';
-import 'package:app_progresio/module/filter/widget/filter_widget_comp.dart';
-import 'package:app_progresio/module/filter/widget/text_field_search.dart';
 import 'package:app_progresio/widget/card_data.dart';
 import 'package:flutter/material.dart';
 import 'package:app_progresio/core.dart';
@@ -65,11 +62,12 @@ class FilterView extends StatefulWidget {
                         isScrollControlled: true,
                         backgroundColor: Colors.transparent,
                         builder: (BuildContext context) {
-                          return filterWidgetComp(context, width, controller,
-                              () {
-                            Navigator.pop(context);
-                            controller.checkDate();
-                          });
+                          return FilterWidgetCompFilter(
+                              width: width,
+                              button: () {
+                                Navigator.pop(context);
+                                controller.checkDate();
+                              });
                         },
                       );
                     },

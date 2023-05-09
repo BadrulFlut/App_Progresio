@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Column textFieldDate(BuildContext context, String title, VoidCallback button) {
+Column textFieldDate(
+    BuildContext context, String title, VoidCallback button, String value) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -22,14 +23,15 @@ Column textFieldDate(BuildContext context, String title, VoidCallback button) {
           width: 170,
           child: TextFormField(
             enabled: false,
-            decoration: const InputDecoration(
-                enabledBorder: UnderlineInputBorder(
+            decoration: InputDecoration(
+                hintText: value == "" ? "" : value,
+                enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Colors.blueGrey,
                   ),
                 ),
-                suffixIcon: Icon(Icons.date_range),
-                border: OutlineInputBorder(
+                suffixIcon: const Icon(Icons.date_range),
+                border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey, width: 1))),
             onChanged: (value) {},
           ),

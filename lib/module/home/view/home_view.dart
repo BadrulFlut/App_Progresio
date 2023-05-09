@@ -43,11 +43,12 @@ class HomeView extends StatefulWidget {
                                 isScrollControlled: true,
                                 backgroundColor: Colors.transparent,
                                 builder: (BuildContext context) {
-                                  return filterWidgetCompHome(
-                                      context, width, controller, () {
-                                    Navigator.pop(context);
-                                    controller.checkDate();
-                                  });
+                                  return FilterWidgetCompHome(
+                                      width: width,
+                                      button: () {
+                                        Navigator.pop(context);
+                                        controller.checkDate();
+                                      });
                                 },
                               );
                             }, () {
@@ -90,11 +91,11 @@ class HomeView extends StatefulWidget {
                                             isScrollControlled: true,
                                             backgroundColor: Colors.transparent,
                                             builder: (BuildContext context) {
-                                              return filterWidgetCompHome(
-                                                  context, width, controller,
-                                                  () {
-                                                Navigator.pop(context);
-                                              });
+                                              return FilterWidgetCompHome(
+                                                  width: width,
+                                                  button: () {
+                                                    Navigator.pop(context);
+                                                  });
                                             },
                                           );
                                         },

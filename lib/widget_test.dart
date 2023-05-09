@@ -1,21 +1,61 @@
 import 'package:flutter/material.dart';
 
-class WidgetTest extends StatefulWidget {
-  const WidgetTest({super.key});
+class MyDialog extends StatefulWidget {
+  const MyDialog({Key? key}) : super(key: key);
 
   @override
-  State<WidgetTest> createState() => _WidgetTestState();
+  _MyDialogState createState() => _MyDialogState();
 }
 
-class _WidgetTestState extends State<WidgetTest> {
-  int number = 0;
+class _MyDialogState extends State<MyDialog> {
+  int _number = 0;
 
-  increnment() {
+  void _incrementNumber() {
     setState(() {
-      number++;
+      _number++;
     });
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 300,
+      alignment: Alignment.center,
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(20),
+        ),
+      ),
+      child: Column(
+        children: [
+          Text(_number.toString()),
+          const SizedBox(
+            height: 20.0,
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueGrey,
+            ),
+            onPressed: () {
+              _incrementNumber();
+            },
+            child: const Text("tambah"),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class WidgetTest extends StatefulWidget {
+  const WidgetTest({Key? key}) : super(key: key);
+
+  @override
+  _WidgetTestState createState() => _WidgetTestState();
+}
+
+class _WidgetTestState extends State<WidgetTest> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,42 +67,12 @@ class _WidgetTestState extends State<WidgetTest> {
           backgroundColor: Colors.blueGrey,
         ),
         onPressed: () {
-          setState(() {
-            showModalBottomSheet(
-              context: context,
-              builder: (BuildContext context) {
-                return Container(
-                  height: 300,
-                  alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(20),
-                    ),
-                  ),
-                  child: Column(
-                    children: [
-                      Text(number.toString()),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blueGrey,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            increnment();
-                          });
-                        },
-                        child: const Text("tambah"),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            );
-          });
+          showModalBottomSheet(
+            context: context,
+            builder: (BuildContext context) {
+              return const MyDialog();
+            },
+          );
         },
         child: const Text("Save"),
       ),
